@@ -10,12 +10,13 @@ import attr
 from pathlib import Path
 import pkg_resources
 import tensorflow as tf
-import os
+import os, sys
 
 
 def graph_train(data_folder:str,
-                config_py:str):
-    files = [f'{data_folder}/train/retweet_edges', f'{data_folder}/test/retweet_edges']
+                config_py:str,
+                is_homog:bool):
+    files = [f'{data_folder}/train/edges', f'{data_folder}/test/edges']
 
     loader = ConfigFileLoader()
     config = loader.load_config(config_py, None)
@@ -35,7 +36,7 @@ def graph_train(data_folder:str,
             config.entity_path,
             config.edge_paths,
             input_edge_paths,
-            TSVEdgelistReader(lhs_col=0, rel_col=None, rhs_col=1, delimiter=','),
+            TSVEdgelistReader(lhs_col=0, rel_col=None, rhs_col=1, delimiter=',') if is_homog else TSVEdgelistReader(lhs_col=0, rel_col=1, rhs_col=2, delimiter=','),
             dynamic_relations=config.dynamic_relations,
         )
 
@@ -49,10 +50,19 @@ def graph_train(data_folder:str,
 
 ## due to dataset size > need to run with tmux
 if __name__ == '__main__':
-    graph_train(data_folder='/Users/grace/workspace/biggraph/homg/', 
-                config_py='/Users/grace/workspace/biggraph/configs/homog_config.py')
+    graph_type = sys.argv[1]=='homogeneous'
+    data_folder = sys.argv[2]
+    config_py = sys.argv[3]
+
+    print(f'homogeneous graph ::: {graph_type}')
+    # graph_train(data_folder='/Users/grace/workspace/biggraph/homg/', 
+    #             config_py='/Users/grace/workspace/biggraph/configs/homog_config.py',
+    graph_train(data_folder=data_folder, 
+                config_py=config_py,
+                is_homog=graph_type)
 
 
+# homogeneous graph
 '''
 [2023-04-11 22:53:01.896790] Using the 1 relation types given in the config            
 [2023-04-11 22:53:01.896858] Searching for the entities in the edge files...           

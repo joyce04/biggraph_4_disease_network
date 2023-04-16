@@ -77,3 +77,5 @@ df_d.loc[df_d.diseaseName.str.find('dementia')>=0].diseaseNID.values
 df_d.loc[df_d.diseaseNID==7897]
 #%%
 df_d.loc[df_d.diseaseNID==135]
+#%%
+df_d.loc[df_d.diseaseNID.isin([135, 18872, 18229, 29816, 10142, 27499, 11577])].values

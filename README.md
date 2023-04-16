@@ -38,3 +38,20 @@ python train_n_eval.py
 python validation.py find --emb_json={path_to_entity_names.json_file} --emb_5={path_to_embeddings_h5_file} --node_id={seed_node_id}
 
 ```
+
+### Trials
+
+- with homogeneous graph, similar disease based on graph embeddings to (diseaseName: Frontotemporal dementia diseaseNID: 7898) are :
+[(diseaseNID, similarity_score, diseaseName, definition from internet)
+('135', 0.9221433997154236, 'Amyotrophic Lateral Sclerosis', 'a progressive nervous system disease that affects nerve cells in the brain and spinal cord, causing loss of muscle control[1]'),
+('18872', 0.8477824330329895, 'AMYOTROPHIC LATERAL SCLEROSIS 1'),
+('18229', 0.7463338375091553, 'POLYCYSTIC LIPOMEMBRANOUS OSTEODYSPLASIA WITH SCLEROSING LEUKOENCEPHALOPATHY', 'Polycystic lipomembranous osteodysplasia with sclerosing leukoencephalopathy (PLOSL) is characterized by fractures (resulting from radiologically demonstrable polycystic osseous lesions), frontal lobe syndrome, and progressive presenile dementia beginning in the fourth decade.[2]'),
+('29816', 0.623500406742096, 'POLYCYSTIC LIPOMEMBRANOUS OSTEODYSPLASIA WITH SCLEROSING LEUKOENCEPHALOPATHY 1'),
+('10142', 0.6186094284057617, 'Dementia'),
+('27499', 0.6068183183670044, 'FRONTOTEMPORAL DEMENTIA AND/OR AMYOTROPHIC LATERAL SCLEROSIS 4'),
+('11577', 0.5620030760765076, 'Frontotemporal Lobar Degeneration')]
+
+
+
+[1] <https://www.mayoclinic.org/diseases-conditions/amyotrophic-lateral-sclerosis/symptoms-causes/syc-20354022#:~:text=Amyotrophic%20lateral%20sclerosis%20(a%2Dmy>,who%20was%20diagnosed%20with%20it.
+[2]
