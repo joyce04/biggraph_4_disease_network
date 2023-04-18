@@ -70,4 +70,4 @@ python validation.py find --emb_json=./entity/entity_names_disease_0.json --emb_
 
 
 [1] <https://www.mayoclinic.org/diseases-conditions/amyotrophic-lateral-sclerosis/symptoms-causes/syc-20354022#:~:text=Amyotrophic%20lateral%20sclerosis%20(a%2Dmy>,who%20was%20diagnosed%20with%20it.
-[2]
+[2] <https://www.ncbi.nlm.nih.gov/books/NBK1197/#:~:text=Polycystic%20lipomembranous%20osteodysplasia%20with%20sclerosing%20leukoencephalopathy%20(PLOSL)%20is%20characterized%20by>,beginning%20in%20the%20fourth%20decade.
