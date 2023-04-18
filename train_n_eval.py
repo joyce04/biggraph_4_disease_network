@@ -55,8 +55,7 @@ if __name__ == '__main__':
     config_py = sys.argv[3]
 
     print(f'homogeneous graph ::: {graph_type}')
-    # graph_train(data_folder='/Users/grace/workspace/biggraph/homg/', 
-    #             config_py='/Users/grace/workspace/biggraph/configs/homog_config.py',
+    
     graph_train(data_folder=data_folder, 
                 config_py=config_py,
                 is_homog=graph_type)

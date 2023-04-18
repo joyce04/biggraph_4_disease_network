@@ -2,7 +2,6 @@
 import random, os, sys
 from datetime import datetime
 import pandas as pd
-import sqlite3
 
 from multiprocessing import Process, Manager, Queue
 from joblib import Parallel, delayed

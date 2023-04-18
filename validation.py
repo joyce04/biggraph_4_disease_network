@@ -2,6 +2,7 @@ import torch
 from common import read_embedding
 from fire import Fire
 
+
 def cos_similarity(user_ids,
                     node_emb,
                     user_id):
@@ -31,8 +32,6 @@ def cos_similarity(user_ids,
 def find_similar_nodes(emb_json,
                        emb_5,
                        node_id):
-    # emb_json = '/Users/grace/workspace/biggraph/entity/entity_names_disease_0.json'
-    # emb_5 = '/Users/grace/workspace/biggraph/models/embeddings_disease_0.v30.h5'
     ids, embs = read_embedding(emb_json, emb_5)
     
     sim_diease = cos_similarity(ids, embs, node_id)
