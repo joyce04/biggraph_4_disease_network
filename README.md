@@ -53,7 +53,7 @@ python validation.py find --emb_json=./entity/entity_names_disease_0.json --emb_
 
 ### Trials
 
-- with homogeneous graph, similar disease based on graph embeddings to (diseaseName: Frontotemporal dementia diseaseNID: 7898) are (above threshold 0.5):\n
+with homogeneous graph, similar disease based on graph embeddings to (diseaseName: Frontotemporal dementia diseaseNID: 7898) are (above threshold 0.5):\n
 [(diseaseNID, similarity_score, diseaseName, definition from internet)\n
 ('135', 0.9221433997154236, 'Amyotrophic Lateral Sclerosis', 'a progressive nervous system disease that affects nerve cells in the brain and spinal cord, causing loss of muscle control[1]'),\n
 ('18872', 0.8477824330329895, 'AMYOTROPHIC LATERAL SCLEROSIS 1'),\n
@@ -64,7 +64,7 @@ python validation.py find --emb_json=./entity/entity_names_disease_0.json --emb_
 ('11577', 0.5620030760765076, 'Frontotemporal Lobar Degeneration')]\n
 
 
-- with heterogeneous graph, similar disease based on graph embeddings to (diseaseName: Frontotemporal dementia diseaseNID: 7898) are (above threshold 0.5):\n
+with heterogeneous graph, similar disease based on graph embeddings to (diseaseName: Frontotemporal dementia diseaseNID: 7898) are (above threshold 0.5):\n
 [('135', 0.6195142269134521, 'Amyotrophic Lateral Sclerosis'), \n
 ('18229', 0.5204249620437622, 'POLYCYSTIC LIPOMEMBRANOUS OSTEODYSPLASIA WITH SCLEROSING LEUKOENCEPHALOPATHY')]\n
 
